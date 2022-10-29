@@ -4,7 +4,7 @@ import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
 const URL = 'https://pixabay.com/api/';
-const KEY = '30822963-d0fd13470d1d847e8cb7d7e51';
+const KEY = '30932931-541e61a77d62bc2845be72b94';
 const searchName = refs.input.value.trim();
 
 export async function getPictures(searchName) {
