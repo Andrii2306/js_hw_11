@@ -1,18 +1,15 @@
 import { refs } from './refs';
 
-export function emptyMarkup() {
+function emptyMarkup() {
   refs.gallery.innerHTML = '';
 }
 
-export function renderMarkup(response) {
-  //console.log('it is responce.data.hits inside renderMarkup(): ', response.data.hits);
-
-  const responseArray = response.data.hits;
-
-  const markup = responseArray.reduce(
+function renderMarkup(response) {
+const responseArray = response.data.hits;
+const markup = responseArray.reduce(
     (
-      acc,
-      {
+    acc,
+    {
         webformatURL,
         largeImageURL,
         tags,
@@ -20,10 +17,10 @@ export function renderMarkup(response) {
         views,
         comments,
         downloads,
-      } = picture
+    } = picture
     ) =>
-      acc +
-      ` <a class="gallery__link" href="${largeImageURL}">
+    acc +
+    ` <a class="gallery__link" href="${largeImageURL}">
                 <div class="photo-card">
                     <img src="${webformatURL}" alt="${tags}" loading="lazy" />
                     <div class="info">
@@ -46,3 +43,5 @@ export function renderMarkup(response) {
   );
   return markup;
 }
+
+export { emptyMarkup, renderMarkup };
