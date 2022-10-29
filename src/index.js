@@ -1,10 +1,10 @@
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-// import { refs } from './js/refs';
-// import { emptyMarkup, renderMarkup } from './js/markupFunctions';
-// import { getPictures } from './js/searchFunction';
-// import { onLoad } from './js/onLoadFunction';
+import { refs } from './js/refs';
+import { emptyMarkup, renderMarkup } from './js/markupFunctions';
+import { getPictures } from './js/searchFunction';
+import { onLoad } from './js/onLoadFunction';
 const axios = require('axios').default;
 
 refs.loadMoreBtn.hidden = true;
